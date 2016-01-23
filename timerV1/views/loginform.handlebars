@@ -1,0 +1,39 @@
+<div>
+  <h4>Login to Timerapp</h4>
+</div>
+<div>
+    <br/>
+    <label for="username">Username:</label>
+    <br/>
+    <input type="text" id="username">
+    <br/>
+    <br/>
+    <label for="password">Password:</label>
+    <br/>
+    <form role="form" method='post' action='http://held.270e.csi.miamioh.edu:3610' id='passform'>
+      <div>
+        <input type="text" id="password">
+      </div>
+    </form>
+    <br/>
+    <br/>
+    <input type="submit" value="Submit" onclick="checkSubmit()">
+    <br/>
+    <div class='alert alert-danger' id='incorrectLogin' style="display: none;">Username or password is incorrect</div>
+  </div>
+<script>
+  document.getElementById("username").focus();
+     
+  function checkSubmit() {
+    console.log($("#password").val());
+    if($("#password").val() === "test"){
+      console.log("correct login");
+      //Create session or whatever.
+    }
+    else{
+      document.getElementById("passform").reset();
+      document.getElementById("password").focus();
+      document.getElementById("incorrectLogin").style.display = "initial";
+    }
+  };
+</script>

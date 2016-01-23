@@ -1,0 +1,25 @@
+<div>
+  {{> info}}
+</div>
+<div style="padding: 5px;">
+  <button id="authorBtn">Author</button>
+</div>
+<div id="author">
+  Program written by Sarah Held
+</div>
+<div style="padding: 5px;">
+  <button id="courseBtn">Course</button>
+</div>
+<div id="course">
+  Program written for CSE270e, Winter Term 2016, Miami University
+</div>
+
+<script type="text/javascript">
+  $("#authorBtn").click(function(){
+    $("#author").toggle();
+  });
+ 
+  $("#courseBtn").click(function(){
+    $("#course").toggle();
+  });
+</script>
